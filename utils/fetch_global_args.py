@@ -2,7 +2,7 @@ import argparse
 import os
 
 DATA_DIR = '/data/'
-ALL_CHROMOSOMES = list(range(1,23)) + ['X', 'Y']
+ALL_CHROMOSOMES = ['X', 'Y', '2R', '2L', '3R', '3L', '4']
 
 def common_args(parser):
     parser.add_argument('--momentum', type=float, default=0.98, help='Momentum for Optimizer, if applicable')

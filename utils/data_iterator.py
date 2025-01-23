@@ -65,7 +65,7 @@ class DataIterator:
         num_examples = 0
             
         for i in self.CHRMS:
-            chrm_dat = joblib.load(dnase_folder_path + '/dnase.chr' + str(i) + '.packbit.joblib', mmap_mode='r')
+            chrm_dat = joblib.load(dnase_folder_path + '/dnase.' + str(i) + '.packbit.joblib', mmap_mode='r')
             self.dnase_data_raw.append(chrm_dat['features'])
             self.dnase_labels_raw.append(chrm_dat['labels'])
             self.dnase_chrm_range[i] = (num_examples, num_examples+chrm_dat['features'].shape[0])
