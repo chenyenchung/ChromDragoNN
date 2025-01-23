@@ -65,7 +65,7 @@ def train(model, optimizer, epoch, di, args, criterion=nn.NLLLoss()):
 
         # predict
         if args.cuda:
-            seq_batch, gene_batch, targets, locus_mean_batch = seq_batch.contiguous().cuda(), gene_batch.contiguous().cuda(), targets.cuda(async=True), locus_mean_batch.contiguous().cuda()
+            seq_batch, gene_batch, targets, locus_mean_batch = seq_batch.contiguous().cuda(), gene_batch.contiguous().cuda(), targets.cuda(), locus_mean_batch.contiguous().cuda()
         seq_batch, gene_batch, targets, locus_mean_batch = Variable(seq_batch), Variable(gene_batch), Variable(targets), Variable(locus_mean_batch)
 
         # compute output

@@ -2,7 +2,7 @@ import joblib
 import os
 import numpy as np
 import sklearn.metrics
-import plotly.plotly as py
+import chart_studio.plotly as py
 import plotly.graph_objs as go
 from plotly.offline import plot
 from random import randint
